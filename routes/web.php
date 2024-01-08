@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\EmpleadoController;
+use App\Models\Empleado;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+    Route::get('/empleado',[EmpleadoController::class, 'store']);
+    Route::post('/menu',[EmpleadoController::class, '']);
+
+
 });
